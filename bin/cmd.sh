@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo HELLO
-
 echo "download jar"
 wget "https://raw.githubusercontent.com/moderakh/azure-vm-extension/master/lib/upload-agent.jar" -O /tmp/upload-agent.jar
 
