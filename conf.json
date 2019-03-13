@@ -1,13 +1,14 @@
 {
-  "cosmosAccount" : {
-    "endpoint" : "https://maccountname.documents.azure.com:443/",
-    "masterKey" : "XYZ",
-    "accountName" : "myaccountname"
-  },
-  "maxConcurrentCDCUpload" : 4,
-  "snapshotName" : "moderakh20190309new",
-  "fileWatcherSleepTimeInMillis" : 2000,
-  "nodeToolConfig" : {
-    "nodetoolCmd" : "nodetool"
-  }
+    "cosmosAccount" : {
+      "endpoint" : "https://replace-account-name.documents.azure.com:443/",
+      "masterKey" : "replace-master-key",
+      "accountName" : "replace-account-name"
+    },
+    "maxConcurrentCDCUpload" : 4,
+    "snapshotName" : "moderakh-20190313T1431",
+    "takeSnapshot" : true,
+    "fileWatcherSleepTimeInMillis" : 2000,
+    "nodeToolConfig" : {
+      "nodetoolCmd" : "nodetool"
+    }
 }
