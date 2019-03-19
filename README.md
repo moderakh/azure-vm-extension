@@ -15,7 +15,7 @@ sudo java -jar upload-agent.jar -cleanup
 
 install as a service and run upload agent
 ```bash
-sudo java -jar upload-agent.jar -cleanup
+sudo java -jar upload-agent.jar -registerAsService -configFile conf.json
 ```
 
 check the log
