@@ -20,6 +20,7 @@ sudo java -jar upload-agent.jar -registerAsService -configFile conf.json
 
 check the log
 ```bash
-tail -F /opt/cosmos/connectors/cassandra/upload-agent/logs/agent.logs
+tail -F /opt/cosmos/connectors/cassandra/upload-agent/logs/agent.log
 ```
 
+If you want to use with cdc use the jar in cdc-lib
