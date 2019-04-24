@@ -2,8 +2,8 @@
   "cassandraHome" : "/opt/cassandra",
   "commitlogArchiveDir" : "/data/cdc",
   "cosmosAccount" : {
-    "endpoint": "https://49baaccc.documents-test.windows-int.net:443/",
-    "masterKey": "D6eVKUTjunC1g6uvTo0PlKswBJAEVX8UD0i1l3CYeCsDviyRruTXmhwOnRw1fp9C5kQ5HEmfaUnEv8UaBKqtLA==",
+    "endpoint": "to_be_replaced",
+    "masterKey": "to_be_replaced",
     "accountName": "49baaccc"
   },
   "maxConcurrentCDCUpload" : 4,
