@@ -16,5 +16,5 @@
   "metricsConfig" : {
     "graphiteEndpoint" : ""
   },
-  "cassandraYamlConfigPath" : "/etc/cassandra/cassandra.yaml",
+  "cassandraYamlConfigPath" : "/etc/cassandra/cassandra.yaml"
 }
