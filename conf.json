@@ -6,6 +6,9 @@
     "masterKey": "to_be_replaced",
     "accountName": "49baaccc"
   },
+  "dataFolderUploadConfig" : {
+    "sleepTimeInMillis" : 5000
+  },
   "maxConcurrentCDCUpload" : 4,
   "snapshotName" : "to_be_replaced",
   "fileWatcherSleepTimeInMillis" : 2000,
