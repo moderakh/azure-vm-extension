@@ -16,5 +16,9 @@
   "metricsConfig" : {
     "graphiteEndpoint" : ""
   },
-  "cassandraYamlConfigPath" : "/etc/cassandra/cassandra.yaml"
+  "cassandraYamlConfigPath" : "/etc/cassandra/cassandra.yaml",
+  "commitLogDiskUsageLimitInPercent" : 60,
+  "snapshotDiskUsageLimitInPercent" : 60,
+  "diskUsageMonitorIntervalInSeconds" : 60,
+  "diskUsageMonitoringEnable" : true
 }
