@@ -3,17 +3,18 @@
   "cassandraYamlConfigPath" : "/opt/cassandra/cassandra.yaml",
   "commitlogArchiveDir" : "/data/cdc",
   "cosmosAccount" : {
-    "endpoint": "to_be_replaced",
-    "masterKey": "to_be_replaced",
-    "accountName": "49baaccc"
+    "endpoint" : "https://putAccountNameHere-documents.azure.com:443",
+    "masterKey" : "putMasterKeyHere",
+    "accountName" : "putAccountNameHere"
   },
   "dataFolderUploadConfig" : {
-    "sleepTimeInMillis" : 5000
+    "sleepTimeInMillis" : 2000
   },
   "maxConcurrentCDCUpload" : 4,
   "isMonitoringEnabled" : true,
-  "snapshotName" : "to_be_replaced",
+  "snapshotName" : "putSnapshotNameHere",
   "takeSnapshot" : true,
+  "uploadCDC" : true,
   "metadataDatabaseName" : "metadataDB",
   "metadataCollectionName" : "metadataColl",
   "queueDatabaseName" : "queueDB",
