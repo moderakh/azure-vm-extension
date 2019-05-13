@@ -1,5 +1,6 @@
 {
   "cassandraHome" : "/opt/cassandra",
+  "cassandraYamlConfigPath" : "/opt/cassandra/cassandra.yaml",
   "commitlogArchiveDir" : "/data/cdc",
   "cosmosAccount" : {
     "endpoint": "to_be_replaced",
@@ -10,16 +11,20 @@
     "sleepTimeInMillis" : 5000
   },
   "maxConcurrentCDCUpload" : 4,
+  "isMonitoringEnabled" : true,
   "snapshotName" : "to_be_replaced",
+  "takeSnapshot" : true,
+  "metadataDatabaseName" : "metadataDB",
+  "metadataCollectionName" : "metadataColl",
+  "queueDatabaseName" : "queueDB",
+  "queueCollectionName" : "queueColl",
   "fileWatcherSleepTimeInMillis" : 2000,
   "nodeToolConfig" : {
     "nodetoolCmd" : "nodetool"
   },
-  "takeSnapshot" : true,
   "metricsConfig" : {
     "graphiteEndpoint" : ""
   },
-  "cassandraYamlConfigPath" : "/etc/cassandra/cassandra.yaml",
   "commitLogDiskUsageLimitInPercent" : 60,
   "snapshotDiskUsageLimitInPercent" : 60,
   "diskUsageMonitorIntervalInSeconds" : 60,
