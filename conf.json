@@ -30,5 +30,5 @@
   "snapshotDiskUsageLimitInPercent" : 60,
   "diskUsageMonitorIntervalInSeconds" : 60,
   "diskUsageMonitoringEnable" : true,
-  "cdcDebugFolderPath" : "/tmp/cdcDebugFolder"
+  "serviceHealthCheckIntervalInSeconds": 5
 }
