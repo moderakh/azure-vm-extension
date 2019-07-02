@@ -2,6 +2,9 @@
   "cassandraHome" : "/opt/cassandra",
   "cassandraYamlConfigPath" : "/opt/cassandra/cassandra.yaml",
   "commitlogArchiveDir" : "/data/cdc",
+  "commitLogUploadConfig" : {
+    "maxInactivityTimeInMillis" : 5000
+  },
   "cosmosAccount" : {
     "endpoint" : "https://putAccountNameHere-documents.azure.com:443",
     "masterKey" : "putMasterKeyHere",
@@ -26,8 +29,8 @@
   "metricsConfig" : {
     "graphiteEndpoint" : ""
   },
-  "commitLogDiskUsageLimitInPercent" : 60,
-  "snapshotDiskUsageLimitInPercent" : 60,
+  "commitLogDiskUsageLimitInPercent" : 80,
+  "snapshotDiskUsageLimitInPercent" : 80,
   "diskUsageMonitorIntervalInSeconds" : 60,
   "diskUsageMonitoringEnable" : true,
   "serviceHealthCheckIntervalInSeconds": 5
