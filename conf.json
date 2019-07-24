@@ -15,6 +15,7 @@
   },
   "maxConcurrentCDCUpload" : 4,
   "isMonitoringEnabled" : true,
+  "registerAsService": true,
   "snapshotName" : "putSnapshotNameHere",
   "takeSnapshot" : true,
   "uploadCDC" : true,
