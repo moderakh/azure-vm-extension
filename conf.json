@@ -30,6 +30,7 @@
   "metricsConfig" : {
     "graphiteEndpoint" : ""
   },
+  "installationPath": "/tmp/cosmos/upload-agent/",
   "commitLogDiskUsageLimitInPercent" : 80,
   "snapshotDiskUsageLimitInPercent" : 80,
   "diskUsageMonitorIntervalInSeconds" : 60,
