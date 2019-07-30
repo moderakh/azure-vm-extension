@@ -20,10 +20,11 @@ Initialize and run upload agent (if 'registerAsService' is set to true in config
 java -jar upload-agent.jar -initialize -configFile conf.json
 ```
 
-else, initialize upload agent and run the shell script to start up upload agent
+else, initialize upload agent and run the shell script (as a background process) to start up upload agent
 ```bash
 java -jar upload-agent.jar -initialize -configFile conf.json
-/bin/bash <installation_path>/start.sh
+/bin/bash <installation_path>/start.sh &
+disown
 ```
 
 Check the log
