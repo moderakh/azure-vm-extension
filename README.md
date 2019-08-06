@@ -8,7 +8,7 @@ put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
 /tmp/conf.json
 ```
 
-Ensure that the user starting the upload agent had permissions for the path specified in 'installationPath' in the conf.json 
+Ensure that the user starting the upload agent had permissions for the path specified in 'installationPath' in the conf.json, and for accessing cassandra data files. Ideally, the user starting the cassandra service should start the upload agent as well. 
 
 Uninstall if previously installed
 ```bash
