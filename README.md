@@ -32,4 +32,10 @@ Check the log
 tail -F <installation_path>/logs/agent.log
 ```
 
+If you do not register the upload agent as a service, the processes need to be monitored and killed before restarting the upload agent.
+Make a note of the process Id (START_SCRIPT_PID) of the start.sh script. Then execute the following command to clean up all the upload-agent related processes.
+```bash
+pkill -9 -g <START_SCRIPT_PID>
+```
+
 If you want to use with cdc use the jar in cdc-lib
