@@ -49,12 +49,12 @@ put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
 /tmp/conf.json
 ```
 
-Uninstall if previously installed
+Uninstall if previously installed. Input password for user when prompted.
 ```bash
 su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -cleanup -configFile /tmp/conf.json"
 ```
 
-Initialize the upload agent
+Initialize the upload agent. Input password for user when prompted.
 ```bash
 su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -initialize -configFile /tmp/conf.json"
 ```
