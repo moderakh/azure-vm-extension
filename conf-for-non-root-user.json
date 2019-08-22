@@ -1,0 +1,40 @@
+{
+  "cassandraHome" : "/opt/cassandra",
+  "cassandraYamlConfigPath" : "/opt/cassandra/cassandra.yaml",
+  "commitlogArchiveDir" : "/data/cdc",
+  "commitLogUploadConfig" : {
+    "maxInactivityTimeInMillis" : 5000
+  },
+  "cosmosAccount" : {
+    "endpoint" : "https://putAccountNameHere-documents.azure.com:443",
+    "masterKey" : "putMasterKeyHere",
+    "accountName" : "putAccountNameHere"
+  },
+  "dataFolderUploadConfig" : {
+    "sleepTimeInMillis" : 2000
+  },
+  "maxConcurrentCDCUpload" : 4,
+  "isMonitoringEnabled" : true,
+  "registerAsService": false,
+  "snapshotName" : "putSnapshotNameHere",
+  "takeSnapshot" : true,
+  "uploadCDC" : true,
+  "metadataDatabaseName" : "metadataDB",
+  "metadataCollectionName" : "metadataColl",
+  "queueDatabaseName" : "queueDB",
+  "queueCollectionName" : "queueColl",
+  "fileWatcherSleepTimeInMillis" : 2000,
+  "nodeToolConfig" : {
+    "nodetoolCmd" : "nodetool"
+  },
+  "metricsConfig" : {
+    "graphiteEndpoint" : ""
+  },
+  "installationPath": "/tmp/cosmos/upload-agent/",
+  "userName": "cassandra",
+  "commitLogDiskUsageLimitInPercent" : 80,
+  "snapshotDiskUsageLimitInPercent" : 80,
+  "diskUsageMonitorIntervalInSeconds" : 60,
+  "diskUsageMonitoringEnable" : true,
+  "serviceHealthCheckIntervalInSeconds": 5
+}
