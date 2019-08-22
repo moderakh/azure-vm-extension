@@ -39,6 +39,8 @@ The Non root user needs to have the following permissions:
      - 'installationPath' specified in conf.json
      - 'commitLogArchive' specified in conf.json
 
+Ideally, the user starting the csassandra service should be the one to start the upload agent as well.
+
 How to install:
 
 put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
@@ -49,12 +51,12 @@ put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
 
 Uninstall if previously installed
 ```bash
-su - <USER_NAME> -c "java -jar upload-agent.jar -cleanup -configFile conf.json"
+su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -cleanup -configFile /tmp/conf.json"
 ```
 
 Initialize the upload agent
 ```bash
-su - <USER_NAME> -c "java -jar upload-agent.jar -initialize -configFile conf.json"
+su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -initialize -configFile /tmp/conf.json"
 ```
 
 Register and start the upload agent service
