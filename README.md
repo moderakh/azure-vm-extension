@@ -65,6 +65,7 @@ Ensure that the user running the sudo command has the following commands whiteli
   - systemctl stop cosmos-upload-agent.service
   - systemctl enable cosmos-upload-agent.service
   - systemctl disable cosmos-upload-agent.service
+  
   (refer : https://askubuntu.com/questions/1089260/start-service-with-sudo)
   
 ```bash
