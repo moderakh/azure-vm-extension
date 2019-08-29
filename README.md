@@ -32,7 +32,7 @@ The Non root user needs to have the following permissions:
   - Read permissions for Upload agent files
      - upload-agent.jar
      - conf.json
-  - Read permissions for all cassandra files
+  - Read and write permissions for all cassandra files
      - data folder for snapshots
      - commitlog folder
   - Read and write permissions for 
@@ -59,7 +59,14 @@ Initialize the upload agent. Input password for user when prompted.
 su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -initialize -configFile /tmp/conf.json"
 ```
 
-Register and start the upload agent service
+Register and start the upload agent service.
+Ensure that the user running the sudo command has the following commands whitelisted in sudoers
+  - systemctl start cosmos-upload-agent.service
+  - systemctl stop cosmos-upload-agent.service
+  - systemctl enable cosmos-upload-agent.service
+  - systemctl disable cosmos-upload-agent.service
+  (refer : https://askubuntu.com/questions/1089260/start-service-with-sudo)
+  
 ```bash
 sudo <INSTALLATION_PATH>/register-and-run-service.sh
 ```
