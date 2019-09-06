@@ -1,18 +1,25 @@
 ## azure-vm-extension
 
-# Root user
-How to install:
-
-put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
+To use the Cosmos DB Cassandra Upload agent, put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
  ```console
 /tmp/upload-agent.jar
 /tmp/conf.json
 ```
 
-Uninstall if previously installed
+# Root user
+
+Validate the config file and system schema before running the upload agent
 ```bash
-sudo java -jar upload-agent.jar -cleanup -configFile conf.json
+sudo java -jar upload-agent.jar -validate -configFile conf.json -validationParams '<VALIDATION_PARAMS>'
 ```
+
+To view all validation parameters
+```bash
+sudo java -jar upload-agent.jar -validate -configFile conf.json -validationParams '-h'
+```
+
+How to install:
+
 
 Initialize and run upload agent as a service
 ```bash
@@ -22,6 +29,11 @@ sudo java -jar upload-agent.jar -initialize -configFile conf.json
 Check the log
 ```bash
 tail -F /opt/cosmos/connectors/cassandra/upload-agent/logs/agent.log
+```
+
+In case you want to uninstall the upload agent, run
+```bash
+sudo java -jar upload-agent.jar -cleanup -configFile conf.json
 ```
 
 # Non Root user
@@ -41,17 +53,22 @@ The Non root user needs to have the following permissions:
 
 Ideally, the user starting the csassandra service should be the one to start the upload agent as well.
 
+Validate the config file and system schema before running the upload agent
+```bash
+su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -validate -configFile /tmp/conf.json -validationParams '<VALIDATION_PARAMS>'"
+```
+
+To view all validation parameters
+```bash
+su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -validate -configFile /tmp/conf.json -validationParams '-h'"
+```
+
 How to install:
 
 put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
  ```console
 /tmp/upload-agent.jar
 /tmp/conf.json
-```
-
-Uninstall if previously installed. Input password for user when prompted.
-```bash
-su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -cleanup -configFile /tmp/conf.json"
 ```
 
 Initialize the upload agent. Input password for user when prompted.
@@ -80,4 +97,9 @@ tail -F <INSTALLATION_PATH>/logs/agent.log
 In case you want to stop the service, run
 ```bash
 sudo <INSTALLATION_PATH>/stop-service.sh
+```
+
+In case you want to uninstall the upload agent, run the following. Input password for user when prompted.
+```bash
+su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -cleanup -configFile /tmp/conf.json"
 ```
