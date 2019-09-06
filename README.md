@@ -10,12 +10,12 @@ To use the Cosmos DB Cassandra Connector Upload agent, put the jar and the conf.
 
 Validate the config file and system schema before running the upload agent
 ```bash
-sudo java -jar upload-agent.jar -validate -configFile conf.json -validationParams '<VALIDATION_PARAMS>'
+sudo java -jar /tmp/upload-agent.jar -validate -configFile /tmp/conf.json -validationParams '<VALIDATION_PARAMS>'
 ```
 
 To view all validation parameters
 ```bash
-sudo java -jar upload-agent.jar -validate -configFile conf.json -validationParams '-h'
+sudo java -jar /tmp/upload-agent.jar -validate -configFile /tmp/conf.json -validationParams '-h'
 ```
 
 How to install:
@@ -23,7 +23,7 @@ How to install:
 
 Initialize and run upload agent as a service
 ```bash
-sudo java -jar upload-agent.jar -initialize -configFile conf.json
+sudo java -jar /tmp/upload-agent.jar -initialize -configFile /tmp/conf.json
 ```
 
 Check the log
@@ -33,7 +33,7 @@ tail -F /opt/cosmos/connectors/cassandra/upload-agent/logs/agent.log
 
 In case you want to uninstall the upload agent, run
 ```bash
-sudo java -jar upload-agent.jar -cleanup -configFile conf.json
+sudo java -jar /tmp/upload-agent.jar -cleanup -configFile /tmp/conf.json
 ```
 
 # Non Root user
@@ -64,12 +64,6 @@ su - <USER_NAME> -c "java -jar /tmp/upload-agent.jar -validate -configFile /tmp/
 ```
 
 How to install:
-
-put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
- ```console
-/tmp/upload-agent.jar
-/tmp/conf.json
-```
 
 Initialize the upload agent. Input password for user when prompted.
 ```bash
