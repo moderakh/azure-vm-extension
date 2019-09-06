@@ -1,6 +1,6 @@
 ## azure-vm-extension
 
-To use the Cosmos DB Cassandra Upload agent, put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
+To use the Cosmos DB Cassandra Connector Upload agent, put the jar and the conf.json in /tmp/ folder in Cassandra Linux VM:
  ```console
 /tmp/upload-agent.jar
 /tmp/conf.json
