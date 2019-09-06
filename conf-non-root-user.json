@@ -1,14 +1,14 @@
 {
   "cassandraHome" : "/opt/cassandra",
   "cassandraYamlConfigPath" : "/opt/cassandra/cassandra.yaml",
+  "commitLogArchivingPropertiesPath": "/opt/cassandra/commitlog_archiving.properties",
   "commitlogArchiveDir" : "/data/cdc",
   "commitLogUploadConfig" : {
     "maxInactivityTimeInMillis" : 5000
   },
   "cosmosAccount" : {
-    "endpoint" : "https://putAccountNameHere-documents.azure.com:443",
-    "masterKey" : "putMasterKeyHere",
-    "accountName" : "putAccountNameHere"
+    "endpoint" : "https://putAccountNameHere.documents.azure.com:443",
+    "masterKey" : "putMasterKeyHere"
   },
   "dataFolderUploadConfig" : {
     "sleepTimeInMillis" : 2000
@@ -19,10 +19,6 @@
   "snapshotName" : "putSnapshotNameHere",
   "takeSnapshot" : true,
   "uploadCDC" : true,
-  "metadataDatabaseName" : "metadataDB",
-  "metadataCollectionName" : "metadataColl",
-  "queueDatabaseName" : "queueDB",
-  "queueCollectionName" : "queueColl",
   "fileWatcherSleepTimeInMillis" : 2000,
   "nodeToolConfig" : {
     "nodetoolCmd" : "nodetool"
@@ -30,7 +26,13 @@
   "metricsConfig" : {
     "graphiteEndpoint" : ""
   },
-  "installationPath": "/tmp/cosmos/upload-agent/",
+  "resourceGovernanceConfig" : {
+    "cpuLimitInPercent": null,
+    "memoryLimitInMb": null,
+    "ioBandwithInMbPerSecond": null
+  },
+  "enableVerboseMetricsLogging": false,
+  "installationPath": "/tmp/cosmos/connectors/cassandra/upload-agent/",
   "userName": "cassandra",
   "commitLogDiskUsageLimitInPercent" : 80,
   "snapshotDiskUsageLimitInPercent" : 80,
