@@ -23,20 +23,10 @@
   "nodeToolConfig" : {
     "nodetoolCmd" : "nodetool"
   },
-  "metricsConfig" : {
-    "graphiteEndpoint" : ""
-  },
   "resourceGovernanceConfig" : {
     "cpuLimitInPercent": null,
     "memoryLimitInMb": null,
     "ioBandwithInMbPerSecond": null
-  },
-  "jolokiaConfig" : {
-    "jolokiaJarPath" : "/opt/apps/jolokia/jolokia-agent.jar",
-    "uploadAgentProcessPort" : "8778",
-    "uploadAgentProcessHost" : "localhost",
-    "watchdogProcessPort" : "8779",
-    "watchdogProcessHost" : "localhost"
   },
   "enableVerboseMetricsLogging": false,
   "installationPath": "/tmp/cosmos/connectors/cassandra/upload-agent/",
