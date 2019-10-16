@@ -28,7 +28,7 @@ sudo java -jar /tmp/upload-agent.jar -initialize -configFile /tmp/conf.json
 
 Check the log
 ```bash
-tail -F /opt/cosmos/connectors/cassandra/upload-agent/logs/agent.log
+tail -F /opt/cosmos/connectors/cassandra/upload-agent/logs/agent/agent.log
 ```
 
 In case you want to uninstall the upload agent, run
@@ -85,7 +85,7 @@ sudo <INSTALLATION_PATH>/register-and-run-service.sh
 
 Check the log
 ```bash
-tail -F <INSTALLATION_PATH>/logs/agent.log
+tail -F <INSTALLATION_PATH>/logs/agent/agent.log
 ```
 
 In case you want to stop the service, run
