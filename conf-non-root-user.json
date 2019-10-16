@@ -28,6 +28,8 @@
     "memoryLimitInMb": null,
     "ioBandwithInMbPerSecond": null
   },
+  "loggingConfig" : {
+  },
   "enableVerboseMetricsLogging": false,
   "installationPath": "/tmp/cosmos/connectors/cassandra/upload-agent/",
   "userName": "cassandra",

@@ -34,6 +34,8 @@
     "memoryLimitInMb": null,
     "ioBandwithInMbPerSecond": null
   },
+  "loggingConfig" : {
+  },
   "enableVerboseMetricsLogging": false,
   "commitLogDiskUsageLimitInPercent" : 80,
   "snapshotDiskUsageLimitInPercent" : 80,
