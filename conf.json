@@ -3,36 +3,10 @@
   "cassandraYamlConfigPath" : "/opt/cassandra/cassandra.yaml",
   "commitLogArchivingPropertiesPath": "/opt/cassandra/commitlog_archiving.properties",
   "commitlogArchiveDir" : "/data/cdc",
-  "commitLogUploadConfig" : {
-    "maxInactivityTimeInMillis" : 5000
-  },
   "cosmosAccount" : {
     "endpoint" : "https://putAccountNameHere.documents.azure.com:443",
     "masterKey" : "putMasterKeyHere"
   },
-  "dataFolderUploadConfig" : {
-    "sleepTimeInMillis" : 2000
-  },
-  "maxConcurrentCDCUpload" : 4,
-  "isMonitoringEnabled" : true,
   "snapshotName" : "putSnapshotNameHere",
-  "takeSnapshot" : true,
-  "uploadCDC" : true,
-  "fileWatcherSleepTimeInMillis" : 2000,
-  "nodeToolConfig" : {
-    "nodetoolCmd" : "nodetool"
-  },
-  "resourceGovernanceConfig" : {
-    "cpuLimitInPercent": null,
-    "memoryLimitInMb": null,
-    "ioBandwithInMbPerSecond": null
-  },
-  "loggingConfig" : {
-  },
-  "enableVerboseMetricsLogging": false,
-  "commitLogDiskUsageLimitInPercent" : 80,
-  "snapshotDiskUsageLimitInPercent" : 80,
-  "diskUsageMonitorIntervalInSeconds" : 60,
-  "diskUsageMonitoringEnable" : true,
-  "serviceHealthCheckIntervalInSeconds": 5
+  "takeSnapshot" : true
 }

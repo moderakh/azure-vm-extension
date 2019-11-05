@@ -33,9 +33,11 @@
   "enableVerboseMetricsLogging": false,
   "installationPath": "/tmp/cosmos/connectors/cassandra/upload-agent/",
   "userName": "cassandra",
-  "commitLogDiskUsageLimitInPercent" : 80,
-  "snapshotDiskUsageLimitInPercent" : 80,
-  "diskUsageMonitorIntervalInSeconds" : 60,
-  "diskUsageMonitoringEnable" : true,
-  "serviceHealthCheckIntervalInSeconds": 5
+  "diskUsageMonitoringConfig" : {
+    "commitLogDiskUsageLimitInPercent" : 80,
+    "snapshotDiskUsageLimitInPercent" : 80,
+    "diskUsageMonitorIntervalInSeconds" : 60,
+    "diskUsageMonitoringEnable" : true,
+    "serviceHealthCheckIntervalInSeconds": 5
+  }
 }
